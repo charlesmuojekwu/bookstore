@@ -3,3 +3,5 @@
 ################################################################################
 
 /bookstoreproject/.vs/bookstoreproject/v17
+/.vs
+/bookstoreproject/bookstoreproject/obj
