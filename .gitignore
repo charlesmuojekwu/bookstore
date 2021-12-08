@@ -6,3 +6,4 @@
 /.vs
 /bookstoreproject/bookstoreproject/obj
 /bookstoreproject/bookstoreproject/bin/Debug/netcoreapp3.1
+/bookstoreproject/bookstoreproject/wwwroot
