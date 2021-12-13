@@ -1,34 +1,90 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    Layout = null;
-}
+﻿
 
-<!DOCTYPE html >
+ @section breadcrumb {
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active " aria-current="page">Index</li>
+        </ol>
+    </nav>
+    }
 
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Landing Page</title>
-        <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-        <link href="~/css/site.css" rel="stylesheet" />
-    </head>
-    
-    <body>
+       <section class="jumbotron text-center">
+           <div>
+               <h1>Welcome to Bookstore </h1>
+               <p class="lead text-muted">
+                   This is the homepage of the bookstore site we are building and after this something really awesome is coming up
+               </p>
+               <p>
+                   <a href="#" class="btn btn-primary my-2">Search Books</a>
+               </p>
+           </div>
+       </section>
 
-        <img class="logo" src="~/images/logo.jpg" alt="The logo" />
+       <div class="py-5 bg-light">
+           <div class="container">
+               @*<h3 class="h3">Top Books</h3>*@
+               <big> Top Book </big>
+               <p big>Top book using atributte</p>
 
-        <h1 >Welcome to the book store applications</h1>
-        <p>This is the details of the home page book</p>
-        <buttton class="btn btn-primary">Click me</buttton>
-    </body>
+               <div class="row">
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <svg class="bd-placeholder-img-card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/"></svg>
+                           <div class="card-body">
+                               <p class="card-text">This section will be used to display short description of the book</p>
+                               <div card="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <a href="#" class="btn btn-sm btn-outline-secondary">View details</a>
+                                   </div>
+                                   <small class="text-muted">Author Name</small>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
 
-    <script src="~/lib/jquery/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            alert("page loaded");
-        })
-    </script>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <svg class="bd-placeholder-img-card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/"></svg>
+                           <div class="card-body">
+                               <p class="card-text">This section will be used to display short description of the book</p>
+                               <div card="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <a href="#" class="btn btn-sm btn-outline-secondary">View details</a>
+                                   </div>
+                                   <small class="text-muted">Author Name</small>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
 
-</html>
+                   <div class="col-md-4">
+                       <div class="card mb-4 shadow-sm">
+                           <svg class="bd-placeholder-img-card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/">Thumbnail</svg>
+                           <div class="card-body">
+                               <p class="card-text">This section will be used to display short description of the book</p>
+                               <div card="d-flex justify-content-between align-items-center">
+                                   <div class="btn-group">
+                                       <a href="#" class="btn btn-sm btn-outline-secondary">View details</a>
+                                   </div>
+                                   <small class="text-muted">Author Name</small>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+
+       @section scripts {
+           <script>
+               $(document).ready(function() {
+                   //alert('The index page');
+               })
+           </script>
+
+       }
+
+ 
+   

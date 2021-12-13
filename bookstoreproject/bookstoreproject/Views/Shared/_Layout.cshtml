@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] | Book Store Application</title>
+
+    <environment include="Development">
+         <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    </environment>
+     <environment exclude="Development">
+          @*<link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />*@
+          <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/34.1.3/css/bootstrap.min.css"
+          asp-fallback-href="~/lib/twitter-bootstrap/css/bootstrap.min.css"
+          asp-fallback-test-class="sr-only"
+          asp-fallback-test-property="position"
+          asp-fallback-test-value="absolute"
+          integrity="" crossorigin="anonymous">
+    </environment>
+    
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="/">
+                  <img src="~/images/logo.jpg" width="30" height="30" asp-append-version="true" />
+                  Book Store
+               </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarNav">
+                  <ul class="navbar-nav">
+                      <li class="nav-item ">
+                        <a class="btn btn-outline-primary" href="#">Login </a>
+                        <a class="btn btn-primary" href="#">Register </a>
+                      </li>
+                   </ul>
+                <ul class="navbar-nav flex-grow-1">
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" asp-controller="Home" asp-action="aboutus">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" asp-controller="Home" asp-action="contactus">Contact</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link text-dark" asp-controller="Book" asp-action="getallbooks">All Books</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" asp-controller="Book" asp-action="AddNewBook">Add New Book</a>
+                  </li>
+
+                 
+                </ul>
+              </div>
+            </nav>     
+    </header>
+
+    @RenderSection("breadcrumb",required:false)
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+
+
+    <footer class=" border-top footer text-muted text-center">
+        <div class="container">
+            Copyright &copy; Book Store Application @DateTime.Now.Year
+            <custom-email my-email="charlesmuojekwu@gmail.com"></custom-email>
+        </div>
+    </footer>
+
+   
+
+    <environment include="Development">
+          <script src="~/lib/jquery/jquery.min.js"></script>
+          <script src="~/jquery-validate/jquery.validate.js"></script>
+          <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+          <script src="~/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+    </environment>
+    <environment exclude="Development">
+          <script src="~/lib/jquery/jquery.min.js"></script>
+          <script src="~/jquery-validate/jquery.validate.js"></script>
+          <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    </environment>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    @RenderSection("scripts",required:false)
+
+</body>
+</html>
